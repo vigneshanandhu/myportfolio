@@ -9,17 +9,20 @@ const Projects = () => {
         {
           image:ProjectImg1,
           description:'A Eccomerce website. Built with Html, Css and JavaScript.',
-          link:''
+          viewlink:'https://simpleshop-eight.vercel.app/',
+          codelink:'https://github.com/vigneshanandhu/simpleshop'
         },
         {
           image:ProjectImg2,
           description:'A Food website. Built with React.js and Bootstrap.',
-          link:''
+          viewlink:'https://farm2-home-three.vercel.app/',
+          codelink:'https://github.com/vigneshanandhu/Farm2Home'
         },
         {
           image:ProjectImg3,
-          description:'A Food website. Built with React.js and Bootstrap.',
-          link:''
+          description:'My Portfolio website. Built with React.js and Bootstrap.',
+          viewlink:'https://myportfolio-orcin-gamma.vercel.app/',
+          codelink:'https://github.com/vigneshanandhu/myportfolio'
         }
       ]
   }
@@ -38,8 +41,8 @@ const Projects = () => {
                         <div className='position-absolute project-dis '>
                            <p className='text-center py-3 px-3'>{project.description}</p>
                            <div className="d-flex justify-content-center gap-2">
-                                <a className="btn" target='_blank' href={project.link}>View Project</a>
-                                <a className="btn" target='_blank' href={project.link}>View Code</a>
+                                <a className="btn" target='_blank' href={project.viewlink}>View Project</a>
+                                <a className="btn" target='_blank' href={project.codelink}>View Code</a>
                            </div>
                         </div>
                  </div>
