@@ -1,0 +1,103 @@
+/* Hero Section */
+#firstflex {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color:  hwb(271 12% 44%);
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 2rem 1rem;
+}
+
+/* Left Content */
+#firstflex > div {
+  max-width: 600px;
+}
+
+#firstflex h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+  color: #fff;
+}
+
+#firstflex h1 span {
+  color: #ffc107; /* highlight letter in yellow */
+}
+
+#firstflex .para {
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: #f8f9fa;
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Social Icons */
+.icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  color: #0d6efd;
+  transition: all 0.3s ease;
+}
+
+.icons a:hover {
+  background: #0d6efd;
+  color: #fff;
+  transform: translateY(-5px);
+}
+
+/* Right Side Image with Gradient Border */
+#firstflex img {
+  max-width: 400px;
+  border-radius: 50%;
+  padding: 6px; /* space for border */
+  background: linear-gradient(135deg, #ff512f, #dd2476, #24c6dc);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+  animation: floatImage 4s ease-in-out infinite;
+}
+
+/* Floating Animation */
+@keyframes floatImage {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0px); }
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  #firstflex {
+    justify-content: center;
+    text-align: center;
+  }
+
+  #firstflex img {
+    max-width: 300px;
+    margin-top: 2rem;
+  }
+
+  .icons {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 576px) {
+  #firstflex h1 {
+    font-size: 2.2rem;
+  }
+
+  #firstflex .para {
+    font-size: 1rem;
+  }
+
+  #firstflex img {
+    max-width: 220px;
+  }
+}

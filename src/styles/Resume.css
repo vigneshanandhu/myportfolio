@@ -1,0 +1,70 @@
+/* Resume.css */
+
+/* Section Styling */
+.resumepage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  padding: 4rem 2rem;
+  background-color: #2b2d77;
+  flex-wrap: wrap; /* allows wrapping for smaller screens */
+}
+
+/* Resume Image */
+.resume-image {
+  max-width: 380px;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0px 8px 20px rgba(0,0,0,0.3);
+}
+
+/* Resume Content */
+.resume-title-side {
+  max-width: 600px;
+  text-align: left;
+}
+
+.resume-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  color: #ffc107; /* Bootstrap warning for highlight */
+}
+
+.fontsize {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #e0e0e0;
+}
+
+/* Button */
+.resume-title-side .btn {
+  background-color: #0d6efd; /* Bootstrap primary */
+  border-radius: 8px;
+  padding: 8px 18px;
+  margin-left: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.resume-title-side .btn:hover {
+  background-color: #0b5ed7;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .resumepage {
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+  }
+
+  .resume-title {
+    font-size: 2rem;
+  }
+
+  .fontsize {
+    font-size: 1rem;
+  }
+}
