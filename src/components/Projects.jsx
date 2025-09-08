@@ -1,9 +1,9 @@
 import React from 'react'
 import '..//styles/Projects.css'
-import ProjectImg1 from '../images/project-image1.jpeg'
-import ProjectImg2 from '../images/project-image2.jpeg'
-import ProjectImg3 from '../images/project-image3.jpeg'
-import ProjectImg4 from '../images/project-image4.jpeg'
+import ProjectImg1 from '../images/project-image 1.jpg'
+import ProjectImg2 from '../images/project-image 2.jpg'
+import ProjectImg3 from '../images/project-image 3.jpg'
+import ProjectImg4 from '../images/project-image 4.jpg'
 const Projects = () => {
   const config = {
       projects : [
