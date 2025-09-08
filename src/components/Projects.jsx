@@ -23,6 +23,12 @@ const Projects = () => {
           description:'My Portfolio website. Built with React.js and Bootstrap.',
           viewlink:'https://myportfolio-orcin-gamma.vercel.app/',
           codelink:'https://github.com/vigneshanandhu/myportfolio'
+        },
+        {
+          image:ProjectImg3,
+          description:'My Django website. Built with Django and MySQL.',
+          viewlink:'https://viki-s-shop-1.onrender.com/',
+          codelink:'https://github.com/vigneshanandhu/viki-s-shop'
         }
       ]
   }
