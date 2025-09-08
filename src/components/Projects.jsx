@@ -3,6 +3,7 @@ import '..//styles/Projects.css'
 import ProjectImg1 from '../images/project-image1.jpeg'
 import ProjectImg2 from '../images/project-image2.jpeg'
 import ProjectImg3 from '../images/project-image3.jpeg'
+import ProjectImg4 from '../images/project-image4.jpeg'
 const Projects = () => {
   const config = {
       projects : [
@@ -25,7 +26,7 @@ const Projects = () => {
           codelink:'https://github.com/vigneshanandhu/myportfolio'
         },
         {
-          image:ProjectImg3,
+          image:ProjectImg4,
           description:'My Django website. Built with Django and MySQL.',
           viewlink:'https://viki-s-shop-1.onrender.com/',
           codelink:'https://github.com/vigneshanandhu/viki-s-shop'
