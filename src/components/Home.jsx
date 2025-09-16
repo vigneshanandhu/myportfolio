@@ -10,20 +10,19 @@ const Home = () => {
     }
   ]
   return (
-    <section className=' px-5 ' id = 'firstflex'>
-       <div>
-          <div className=' text-white  py-5'>
-                <h1>Hi,</h1> 
-                <h1>I'm <span className='text-black'>V</span> Vignesh</h1> 
-                <p className='para'>I'm a Frontend Web Devloper</p>
-         </div>
-         <div className='d-flex gap-2  icons'>
-            <a href={config[0].link1} className='hovericon' target='_blank'  rel='noopener noreferrer'><AiOutlineGithub size={25}/></a>
-            <a href={config[0].link2} className='hovericon'  target='_blank'  rel='noopener noreferrer'><AiOutlineLinkedin size={25}/></a>
-         </div>
-       </div>
-        <img  src={image1}/>
-      
+    <section className='home-section px-5' id='firstflex' data-aos="fade-up">
+      <div className="home-flex-container d-flex align-items-center flex-wrap">
+        <div className="home-text" data-aos="fade-right">
+          <h1>Hi,</h1> 
+          <h1>I'm <span className='text-black'>V</span> Vignesh</h1> 
+          <p className='para'>I'm a Frontend Web Devloper</p>
+          <div className='d-flex gap-2 icons' data-aos="zoom-in">
+            <a href={config[0].link1} className='hovericon' target='_blank' rel='noopener noreferrer'><AiOutlineGithub size={25}/></a>
+            <a href={config[0].link2} className='hovericon' target='_blank' rel='noopener noreferrer'><AiOutlineLinkedin size={25}/></a>
+          </div>
+        </div>
+        <img className="home-image" src={image1} data-aos="fade-left" alt="Hero" />
+      </div>
     </section>
   )
 }

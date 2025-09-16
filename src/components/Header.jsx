@@ -22,6 +22,7 @@ const Header = () => {
         <ul className="d-flex secondflex">
           <li><a href="/">Home</a></li>
           <li><a href="#about">About</a></li>
+          <li><a href="#skill">Skills</a></li>
           <li><a href="#project">Projects</a></li>
           <li><a href="#resume">Resume</a></li>
           <li><a href="#contact">Contact</a></li>
@@ -37,6 +38,7 @@ const Header = () => {
           >
             <li><a href="/">Home</a></li>
             <li><a href="#about">About</a></li>
+            <li><a href="#skill">Skills</a></li>
             <li><a href="#project">Projects</a></li>
             <li><a href="#resume">Resume</a></li>
             <li><a href="#contact">Contact</a></li>

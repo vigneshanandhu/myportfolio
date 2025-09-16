@@ -13,6 +13,7 @@ header .title {
   font-size: 1.3rem;
   text-decoration: none;
   color: #000;
+  
 }
 
 header .title:hover {
@@ -22,13 +23,14 @@ header .title:hover {
 /* Desktop Nav */
 .desktop-nav {
   display: block;
+  margin-right: 50px;
 }
 
 .secondflex {
   list-style: none;
   margin: 0;
   padding: 0;
-  gap: 1.5rem;
+  gap: 2rem;
 }
 
 .secondflex li a {

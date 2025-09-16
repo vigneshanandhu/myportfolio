@@ -7,7 +7,7 @@
   justify-content: center;
   gap: 3rem;
   padding: 4rem 2rem;
-  background-color: #2b2d77;
+   background-color:  hwb(271 12% 44%);
   flex-wrap: wrap; /* allows wrapping for smaller screens */
 }
 

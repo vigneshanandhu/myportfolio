@@ -4,17 +4,45 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color:  hwb(271 12% 44%);
+  background-color: hwb(271 12% 44%);
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 10rem;
   padding: 2rem 1rem;
 }
 
-/* Left Content */
+/* Flex Container */
+.home-flex-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-left: 300px;
+}
+
+/* Left Text Content */
+.home-text {
+  flex: 1 1 300px;
+  min-width: 250px;
+}
+
+/* Right Image */
+.home-image {
+  max-width: 350px;
+  width: 100%;
+  height: auto;
+  flex: 1 1 250px;
+  min-width: 250px;
+  display: block;
+  margin: 0;
+}
+
+/* Restrict max width for inner div */
 #firstflex > div {
   max-width: 600px;
 }
 
+/* Heading Styles */
 #firstflex h1 {
   font-size: 3rem;
   font-weight: 700;
@@ -24,9 +52,10 @@
 }
 
 #firstflex h1 span {
-  color: #ffc107; /* highlight letter in yellow */
+  color: #ffc107; /* Highlight letter in yellow */
 }
 
+/* Paragraph Styles */
 #firstflex .para {
   font-size: 1.25rem;
   font-weight: 400;
@@ -36,6 +65,11 @@
 }
 
 /* Social Icons */
+.icons {
+  display: flex;
+  gap: 1rem;
+}
+
 .icons a {
   display: flex;
   align-items: center;
@@ -54,11 +88,11 @@
   transform: translateY(-5px);
 }
 
-/* Right Side Image with Gradient Border */
+/* Right Image with Gradient Border */
 #firstflex img {
   max-width: 400px;
   border-radius: 50%;
-  padding: 6px; /* space for border */
+  padding: 6px;
   background: linear-gradient(135deg, #ff512f, #dd2476, #24c6dc);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
   animation: floatImage 4s ease-in-out infinite;
@@ -66,21 +100,55 @@
 
 /* Floating Animation */
 @keyframes floatImage {
-  0% { transform: translateY(0px); }
-  50% { transform: translateY(-15px); }
-  100% { transform: translateY(0px); }
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }
 
-/* Responsive */
+/* ============================= */
+/* Responsive Styles Enhancements */
+/* ============================= */
+
+/* For large tablets and smaller desktops */
+@media (max-width: 1200px) {
+  .home-flex-container {
+    margin-left: 100px;
+  }
+
+  #firstflex {
+    gap: 5rem;
+    padding: 2rem;
+  }
+}
+
+/* For tablets and medium screens */
 @media (max-width: 992px) {
   #firstflex {
     justify-content: center;
+    text-align: center;
+    gap: 3rem;
+    padding: 2rem;
+  }
+
+  .home-flex-container {
+    margin-left: 0;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .home-text {
     text-align: center;
   }
 
   #firstflex img {
     max-width: 300px;
-    margin-top: 2rem;
+    margin-top: 1rem;
   }
 
   .icons {
@@ -88,9 +156,30 @@
   }
 }
 
-@media (max-width: 576px) {
+/* For smaller tablets and large phones */
+@media (max-width: 768px) {
   #firstflex h1 {
-    font-size: 2.2rem;
+    font-size: 2.5rem;
+  }
+
+  #firstflex .para {
+    font-size: 1.1rem;
+  }
+
+  #firstflex img {
+    max-width: 250px;
+  }
+}
+
+/* For mobile screens */
+@media (max-width: 576px) {
+  #firstflex {
+    gap: 2rem;
+    padding: 1rem;
+  }
+
+  #firstflex h1 {
+    font-size: 2rem;
   }
 
   #firstflex .para {
@@ -99,5 +188,30 @@
 
   #firstflex img {
     max-width: 220px;
+  }
+
+  .icons a {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* For very small screens */
+@media (max-width: 400px) {
+  #firstflex h1 {
+    font-size: 1.8rem;
+  }
+
+  #firstflex .para {
+    font-size: 0.9rem;
+  }
+
+  #firstflex img {
+    max-width: 180px;
+  }
+
+  .icons a {
+    width: 35px;
+    height: 35px;
   }
 }

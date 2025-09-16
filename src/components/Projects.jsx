@@ -34,16 +34,16 @@ const Projects = () => {
       ]
   }
   return (
-    <section className=' project-div flex-column text-white h-auto pb-5'id='project'>
+    <section className=' project-div flex-column text-white h-auto pb-5' id='project' data-aos="fade-up">
         <div className=''>
-            <div className='project-heading'>
+            <div className='project-heading' data-aos="fade-down">
                 <h1 className='project-title text-warning'>Projects</h1>
                 <p className='project-title-para'>These are some of my best projects. I have built these with React.js ,bootsrap , Html, Css, JavaScript. Check them out.</p>
             </div>
         </div>
         <div id = "project-card" className='mt-3 d-flex gap-5 flex-wrap  '>
-          {config.projects.map((project)=>(
-                <div className='position-relative proj-img'>
+          {config.projects.map((project, idx)=>(
+                <div className='position-relative proj-img' key={idx} data-aos="zoom-in-up">
                     <img className='project-image' src={project.image} alt="" />
                         <div className='position-absolute project-dis '>
                            <p className='text-center py-3 px-3'>{project.description}</p>
@@ -54,11 +54,7 @@ const Projects = () => {
                         </div>
                  </div>
           ))}
-            
-           
-            
         </div>
-        
     </section>
   )
 }

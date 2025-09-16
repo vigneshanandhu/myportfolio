@@ -6,11 +6,11 @@ const Contact = () => {
       phone:'+91 9342216892'
    }
   return (
-    <section className='contactpage py-5 text-white text-center' id ="contact">
-                <h1 className=' contact-title'>Contact</h1>
-                <p className=' mt-3 fontsize'>If you want to discuss more in detail. please contact me.</p>
-                <p><span className='fw-bold'>Email:</span>{config.email}</p>
-                <p><span className='fw-bold'>phone:</span>{config.phone}</p>
+    <section className='contactpage py-5 text-white text-center' id ="contact" data-aos="fade-up">
+                <h1 className=' contact-title' data-aos="fade-down">Contact</h1>
+                <p className=' mt-3 fontsize' data-aos="fade-right">If you want to discuss more in detail. please contact me.</p>
+                <p data-aos="fade-left"><span className='fw-bold'>Email:</span>{config.email}</p>
+                <p data-aos="fade-right"><span className='fw-bold'>phone:</span>{config.phone}</p>
     </section>
   )
 }
