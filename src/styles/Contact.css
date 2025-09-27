@@ -1,9 +1,11 @@
-/* Contact.css */
-
 /* Section Styling */
 .contactpage {
-background-color: #2b2d77;
-  padding: 4rem 2rem;
+  background-color: #2b2d77;
+  padding: 4rem 1rem; /* reduced horizontal padding to prevent overflow */
+  width: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden; /* prevents horizontal scroll */
+  text-align: center;
 }
 
 /* Title */
@@ -26,18 +28,20 @@ background-color: #2b2d77;
   font-size: 1rem;
   color: #e0e0e0;
   margin-bottom: 0.5rem;
+  word-wrap: break-word; /* ensures long text doesn't overflow */
 }
 
 /* Highlight (Email, Phone) */
 .contactpage span {
   color: #0d6efd; /* Bootstrap primary */
   margin-right: 6px;
+  word-wrap: break-word;
 }
 
 /* Responsive */
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .contact-title {
-    font-size: 2rem;
+    font-size: 2.2rem;
   }
 
   .fontsize {
@@ -46,5 +50,19 @@ background-color: #2b2d77;
 
   .contactpage p {
     font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .contact-title {
+    font-size: 1.8rem;
+  }
+
+  .fontsize {
+    font-size: 0.9rem;
+  }
+
+  .contactpage p {
+    font-size: 0.85rem;
   }
 }

@@ -1,14 +1,15 @@
-/* Resume.css */
-
 /* Section Styling */
 .resumepage {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 3rem;
-  padding: 4rem 2rem;
-   background-color:  hwb(271 12% 44%);
+  gap: 2rem; /* slightly reduced gap */
+  padding: 4rem 1rem; /* reduced horizontal padding */
+  background-color: hwb(271 12% 44%);
   flex-wrap: wrap; /* allows wrapping for smaller screens */
+  width: 100%;
+  overflow-x: hidden; /* prevent horizontal scroll */
+  box-sizing: border-box;
 }
 
 /* Resume Image */
@@ -18,12 +19,15 @@
   height: auto;
   border-radius: 12px;
   box-shadow: 0px 8px 20px rgba(0,0,0,0.3);
+  box-sizing: border-box;
 }
 
 /* Resume Content */
 .resume-title-side {
   max-width: 600px;
+  width: 100%; /* ensures scaling on small screens */
   text-align: left;
+  box-sizing: border-box;
 }
 
 .resume-title {
@@ -44,7 +48,7 @@
   background-color: #0d6efd; /* Bootstrap primary */
   border-radius: 8px;
   padding: 8px 18px;
-  margin-left: 8px;
+  margin-left: 0; /* remove extra margin for small screens */
   transition: background-color 0.3s ease;
 }
 
@@ -57,7 +61,8 @@
   .resumepage {
     flex-direction: column;
     text-align: center;
-    gap: 2rem;
+    gap: 1.5rem;
+    padding: 2rem 1rem;
   }
 
   .resume-title {
@@ -66,5 +71,19 @@
 
   .fontsize {
     font-size: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .resume-image {
+    max-width: 280px;
+  }
+
+  .resume-title {
+    font-size: 1.8rem;
+  }
+
+  .fontsize {
+    font-size: 0.95rem;
   }
 }

@@ -1,10 +1,11 @@
-/* Projects.css */
-
 /* Section Styling */
 .project-div {
- background-color: #2b2d77;
-  padding: 3rem 2rem;
+  background-color: #2b2d77;
+  padding: 3rem 1rem; /* reduced horizontal padding */
   text-align: center;
+  overflow-x: hidden; /* prevents horizontal scroll */
+  width: 100%;
+  box-sizing: border-box;
 }
 
 /* Heading */
@@ -35,9 +36,6 @@
 }
 
 /* Project Image */
-#project-card{
-    margin-left: 100px;
-}
 .project-image {
   width: 100%;
   height: 220px;
@@ -66,7 +64,7 @@
 
 /* Button */
 .project-dis .btn {
-  background-color: #0d6efd; /* Bootstrap primary */
+  background-color: #0d6efd;
   color: white;
   padding: 6px 16px;
   border-radius: 8px;
@@ -75,6 +73,15 @@
 
 .project-dis .btn:hover {
   background-color: #0b5ed7;
+}
+
+/* Flex container fix */
+#project-card {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem; /* reduces overflow on small screens */
+  justify-content: center; /* center cards */
+  margin: 0 auto; /* remove margin-left */
 }
 
 /* Responsive */
@@ -91,8 +98,5 @@
 
   .project-image {
     height: 200px;
-  }
-  #project-card{
-    margin-left: 20px;
   }
 }

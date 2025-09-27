@@ -1,11 +1,14 @@
 /* Common Header */
 header {
+  display: flex;
   align-items: center;
   justify-content: space-between;
   background: #f8f9fa;
   position: sticky;
   top: 0;
-  z-index: 1000;
+  width: 100%;
+  padding: 0.5rem 1rem; /* give space without breaking layout */
+  overflow-x: hidden;   /* ✅ prevent accidental overflow */
 }
 
 /* Title */
@@ -13,7 +16,6 @@ header .title {
   font-size: 1.3rem;
   text-decoration: none;
   color: #000;
-  
 }
 
 header .title:hover {
@@ -23,14 +25,15 @@ header .title:hover {
 /* Desktop Nav */
 .desktop-nav {
   display: block;
-  margin-right: 50px;
 }
 
 .secondflex {
+  display: flex;
   list-style: none;
   margin: 0;
   padding: 0;
   gap: 2rem;
+  flex-wrap: wrap; /* ✅ wrap links on smaller widths */
 }
 
 .secondflex li a {
@@ -64,6 +67,7 @@ header .title:hover {
 }
 
 .thirdflex {
+  display: flex;
   flex-direction: column;
   gap: 1rem;
   padding: 1rem 0;

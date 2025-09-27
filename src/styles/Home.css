@@ -6,8 +6,9 @@
   justify-content: space-between;
   background-color: hwb(271 12% 44%);
   flex-wrap: wrap;
-  gap: 10rem;
+  gap: 3rem;
   padding: 2rem 1rem;
+  overflow-x: hidden; /* ✅ prevents overflow */
 }
 
 /* Flex Container */
@@ -17,7 +18,7 @@
   justify-content: space-between;
   gap: 1rem;
   flex-wrap: wrap;
-  margin-left: 300px;
+  width: 100%;
 }
 
 /* Left Text Content */
@@ -28,18 +29,19 @@
 
 /* Right Image */
 .home-image {
-  max-width: 350px;
+  max-width: 450px;
   width: 100%;
   height: auto;
   flex: 1 1 250px;
   min-width: 250px;
   display: block;
-  margin: 0;
+  margin: 0 auto; /* ✅ keeps centered without overflow */
 }
 
 /* Restrict max width for inner div */
 #firstflex > div {
-  max-width: 600px;
+  max-width: 900px;
+  margin: 0 auto; /* ✅ center content */
 }
 
 /* Heading Styles */
@@ -52,7 +54,7 @@
 }
 
 #firstflex h1 span {
-  color: #ffc107; /* Highlight letter in yellow */
+  color: #ffc107;
 }
 
 /* Paragraph Styles */
@@ -91,6 +93,10 @@
 /* Right Image with Gradient Border */
 #firstflex img {
   max-width: 400px;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
   border-radius: 50%;
   padding: 6px;
   background: linear-gradient(135deg, #ff512f, #dd2476, #24c6dc);
@@ -100,15 +106,9 @@
 
 /* Floating Animation */
 @keyframes floatImage {
-  0% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-15px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0px); }
 }
 
 /* ============================= */
@@ -118,7 +118,7 @@
 /* For large tablets and smaller desktops */
 @media (max-width: 1200px) {
   .home-flex-container {
-    margin-left: 100px;
+    margin-left: 0; /* ❌ removed 100px to fix horizontal scroll */
   }
 
   #firstflex {
@@ -137,7 +137,6 @@
   }
 
   .home-flex-container {
-    margin-left: 0;
     flex-direction: column;
     gap: 2rem;
   }
@@ -158,7 +157,7 @@
 
 /* For smaller tablets and large phones */
 @media (max-width: 768px) {
-  #firstflex h1 {
+  #firstflex .hii {
     font-size: 2.5rem;
   }
 
@@ -178,7 +177,7 @@
     padding: 1rem;
   }
 
-  #firstflex h1 {
+  #firstflex .hii {
     font-size: 2rem;
   }
 
@@ -197,9 +196,10 @@
 }
 
 /* For very small screens */
-@media (max-width: 400px) {
-  #firstflex h1 {
+@media (max-width: 425px) {
+  #firstflex .hii {
     font-size: 1.8rem;
+    padding-top: 50px;
   }
 
   #firstflex .para {
