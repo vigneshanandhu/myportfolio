@@ -3,7 +3,7 @@ import ResumeImg from '../images/resume.png'
 import '../styles/Resume.css'
 const Resume = () => {
   const config = {
-     link:'https://drive.google.com/file/d/1aWQqBCJ76AiEr8qBkes9KTHaUfzFjpxZ/view?usp=sharing'
+     link:'https://drive.google.com/file/d/1FCq2w4lZooTCD2C7X3_yLqnCXUALA4o6/view?usp=sharing'
   }
   return (
     <section className='resumepage py-5' id ='resume' data-aos="fade-up">
